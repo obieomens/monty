@@ -5,11 +5,11 @@
  * @line_num: line number
  * Return: stack after element removal
  */
-void _pop(stack_t **head, unisgned int line_num)
+void _pop(stack_t **head, unsigned int line_num)
 {
 	stack_t *hd;
 
-	if (**head == NULL)
+	if (*head == NULL)
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
 		fclose(buf.file);
@@ -18,6 +18,6 @@ void _pop(stack_t **head, unisgned int line_num)
 		exit(EXIT_FAILURE);
 	}
 	hd = *head;
-	*head = h->next;
-	free(h);
+	*head = hd->next;
+	free(hd);
 }

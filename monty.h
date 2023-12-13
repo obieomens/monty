@@ -9,6 +9,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdarg.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -55,7 +58,7 @@ typedef struct buf_s
 	FILE *file;
 	char *line_con;
 	int flag;
-} buf_t
+} buf_t;
 extern buf_t buf;
 
 void free_stack(stack_t *head);
@@ -63,4 +66,5 @@ void _push(stack_t **head, unsigned int line_num);
 void _pall(stack_t **head, unsigned int line_num);
 void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
+
 #endif

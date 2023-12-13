@@ -15,9 +15,12 @@ void _push(stack_t **head, unsigned int line_num)
 		{
 			y++;
 		}
-		for (; buf.arg[y] > 57 || buf.arg[y] < 48)
+		for (; buf.arg[y] != '\0'; y++)
 		{
-			signal = 1;
+			if (buf.arg[y] > 57 || buf.arg[y] < 48)
+			{
+				signal = 1;
+			}
 		}
 		if (signal == 1)
 		{
