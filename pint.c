@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * _pint- prints top of stack
+ * f_pint- prints top of stack
  * @head: pointer to head
  * @line_num: line number
  * Return: top of stack
  */
-void _pint(stack_t **head, unsigned int line_num)
+void f_pint(stack_t **head, unsigned int line_num)
 {
 	if (*head == NULL)
 	{
@@ -15,5 +15,5 @@ void _pint(stack_t **head, unsigned int line_num)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n",( *head)->n);
+	printf("%d\n", (*head)->n);
 }

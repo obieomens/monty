@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * _push- function that pushes an element to the stack
+ * f_push- function that pushes an element to the stack
  * @head: pointer to head stack
  * @line_num: line number
  * Return: pushed element
  */
-void _push(stack_t **head, unsigned int line_num)
+void f_push(stack_t **head, unsigned int line_num)
 {
 	int x, y = 0, signal = 0;
 
@@ -50,16 +50,15 @@ void _push(stack_t **head, unsigned int line_num)
 	}
 }
 /**
- * _pall- prints the stack
+ * f_pall- prints the stack
  * @head: pointer to head stack
  * @line_num: line number but not used in this instance
  * Return: printed stack
  */
-void _pall(stack_t **head, unsigned int line_num)
+void f_pall(stack_t **head, unsigned int line_num)
 {
 	stack_t *hd;
 	(void)line_num;
-
 	hd = *head;
 	if (hd == NULL)
 	{
@@ -71,3 +70,4 @@ void _pall(stack_t **head, unsigned int line_num)
 		hd = hd->next;
 	}
 }
+
